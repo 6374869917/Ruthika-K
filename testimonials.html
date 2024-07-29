@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <h1 style="font-size: xx-large;">
+          <img src="https://st2.depositphotos.com/4483779/6691/v/450/depositphotos_66916419-stock-illustration-auto-on-the-road-logo.jpg" alt="Driving School Logo">
+          RK Driving School
+        </h1>
+      </div>
+        <nav>
+            <ul>
+                <ul class="nav-links">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+      </header>
+      <section class="banner">
+        <div class="banner-text">
+           Testimonials
+        </div>
+    </section>
+    <br>
+    <section class="driving-gallery">
+              <div class="item-container" onclick="openPopup(this, 0)">
+             <div class="image-container">
+                  <img src="https://img.freepik.com/free-photo/young-female-being-uber-driver_23-2149184235.jpg?size=626&ext=jpg&ga=GA1.1.1395572893.1722151177&semt=ais_user" alt="Driving Lesson 1" class="driving-img">
+                  <div class="overlay"><span>>Driving Lesson 1</span></div>
+             </div>
+            <div class="content">
+                <h3 style="text-align: center;">Beginning Course</h3>
+                <p style="font-size: medium; text-align: justify;">Learn the basics of driving with our comprehensive beginner's course</p>
+            </div>
+        </div>
+        <div class="item-container" onclick="openPopup(this, 1)">
+            <div class="image-container">
+                <img src="https://img.freepik.com/premium-photo/joyful-girl-driving-training-car-with-drivers-license-card-her-hands_151428-1201.jpg?size=626&ext=jpg&ga=GA1.1.1395572893.1722151177&semt=ais_user" alt="Driving Lesson 3" class="driving-img">
+                <div class="overlay"><span>Driving Lesson 2</span></div>
+            </div>
+            <div class="content">
+                <h3 style="text-align: center;">Advanced Course</h3>
+                <p style="font-size: medium;">Take your driving to the next level with advanced course.</p>
+            </div>
+        </div>
+        <div class="item-container" onclick="openPopup(this, 2)">
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/happy-woman-car-dealership_23-2148130162.jpg?size=626&ext=jpg" alt="Driving Lesson 4" class="driving-img">
+                <div class="overlay"><span>Driving Lesson 3</span></div>
+            </div>
+            <div class="content">
+                <h3 style="text-align: center;">Defensive Driving</h3>
+                <p style="font-size: medium;">Learn defensive driving techniques to stay safe on the road and avoid accidents.</p>
+            </div>
+        </div>
+        <div class="item-container" onclick="openPopup(this, 3)">
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/smiley-businesswoman-waving-from-her-car_23-2148766999.jpg?size=626&ext=jpg" alt="Driving Lesson 5" class="driving-img">
+                <div class="overlay"><span>Driving Lesson 4</span></div>
+            </div>
+            <div class="content">
+                <h3 style="text-align: center;">Highway Driving</h3>
+                <p style="font-size: medium;">Master the skills needed for safe and confident driving on highways and freeways.</p>
+            </div>
+        </div>
+        <div class="item-container" onclick="openPopup(this, 4)">
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/person-taking-driver-s-license-exam_23-2149891406.jpg" alt="Driving Lesson 6" class="driving-img">
+                <div class="overlay"><span>Driving Lesson 5</span></div>
+            </div>
+            <div class="content">
+                <h3 style="text-align: center;">Parallel Parking</h3>
+                <p style="font-size: medium;">Learn how to parallel park with ease and precision, an essential skill for urban driving.</p>
+            </div>
+        </div>
+        <div class="item-container" onclick="openPopup(this, 5)">
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/smiley-woman-having-her-seat-belt_23-2148510595.jpg?size=626&ext=jpg" alt="Driving Lesson 9" class="driving-img">
+                <div class="overlay"><span>Driving Lesson 6</span></div>
+            </div>
+            <div class="content">
+                <h3 style="text-align: center;">Snowy Weather Driving</h3>
+                <p style="font-size: medium;">Master the techniques needed to drive safely in snowy and icy conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+
+    
+
+    <div class="popup" id="popup">
+
+        <button class="popup-close" onclick="closePopup()">Close</button>
+
+        <div class="popup-content" id="popupContent"></div>
+
+        <a class="nav-btn prev" onclick="changeTestimonial(-1)">&#10094;</a>
+
+        <a class="nav-btn next" onclick="changeTestimonial(1)">&#10095;</a>
+
+    </div>
+
+    
+
+    <script>
+
+        let currentIndex = 0;
+
+        const testimonials = document.querySelectorAll('.item-container');
+
+    
+
+        function openPopup(element, index) {
+
+            currentIndex = index;
+
+            updatePopupContent();
+
+            document.getElementById('popup').style.display = 'block';
+
+            document.getElementById('popupOverlay').style.display = 'block';
+
+        }
+
+    
+
+        function closePopup() {
+
+            document.getElementById('popup').style.display = 'none';
+
+            document.getElementById('popupOverlay').style.display = 'none';
+
+        }
+
+    
+
+        function updatePopupContent() {
+
+            const testimonial = testimonials[currentIndex];
+
+            const imageSrc = testimonial.querySelector('.driving-img').src;
+
+            const contentHtml = testimonial.querySelector('.content').innerHTML;
+
+            document.getElementById('popupContent').innerHTML = `
+
+                <div class="popup-image">
+
+                    <img src="${imageSrc}" alt="Testimonial Image" style="width: 100%; border-radius: 5px;">
+
+                </div>
+
+                <div class="popup-text">
+
+                    ${contentHtml}
+
+                </div>
+
+            `;
+
+        }
+
+    
+
+        function changeTestimonial(direction) {
+
+            currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
+
+            updatePopupContent();
+
+        }
+
+    </script>
+
+
+<footer class="footer">
+  <div class="footer-content">
+      <div class="footer-section useful-links">
+          <h2 style="color:rgba(170, 223, 238, 0.954) ">Useful Links</h2>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="product.html">Product</a></li>
+              <li><a href="testimonial.html">Testimonial</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <div class="footer-section address">
+          <h2 style="color:rgba(170, 223, 238, 0.954) ">Contact Details</h2>
+          <p style="font-size: larger;"> No.24/1 pachaiyappa street,<br>
+            opposite to Anna arch, <br>
+              Arumbakkam, Chennai,<br>
+              Tamil Nadu-600106</p>
+           <p style="font-size: larger;">Email: rk@drivingschool.com<br>
+               Phone: 6375879918</p>
+      </div>
+  </div>
+  <div class="social-media">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+  </footer>
+  <footer>
+  <div class="footer-bottom">
+      <p style="text-align: center;">&copy; 2024 RK Driving School . All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
